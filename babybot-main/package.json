@@ -27,6 +27,7 @@
     "@adiwajshing/baileys": "^3.3.0",
     "async": "^2.4.1",
     "axios": "^0.21.0",
+    "base64-img": "^1.0.4",
     "brainly-scraper": "^1.0.3",
     "cfonts": "^2.9.0",
     "dotenv": "^8.2.0",

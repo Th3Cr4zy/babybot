@@ -1649,7 +1649,7 @@ case 'neontext':
 						mentions(teks, mentioned, true)
 						baby.groupDemoteAdmin(from, mentioned)
 					} else {
-						mentions(`Yahh @${mentioned[0].split('@')[0]} Jabatan você, como ancestral do grupo, foi removido🏃`, mentioned, true)
+						mentions(`Yahh @${mentioned[0].split('@')[0]} Virou membro comum kkkkkkkkkkkkkkkk`, mentioned, true)
 						baby.groupDemoteAdmin(from, mentioned)
 					}
 					break
@@ -1669,7 +1669,7 @@ case 'neontext':
 						mentions(teks, mentioned, true)
 						baby.groupMakeAdmin(from, mentioned)
 					} else {
-						mentions(`Selamat🥳 @${mentioned[0].split('@')[0]} *você se tornou adm do grupo* >_<`, mentioned, true)
+						mentions(`Parabens🥳 @${mentioned[0].split('@')[0]} *Você não é mais um membro comum* >_<`, mentioned, true)
 						baby.groupMakeAdmin(from, mentioned)
 					}
 					break
@@ -1690,7 +1690,7 @@ case 'neontext':
 						mentions(teks, mentioned, true)
 						baby.groupAdd(from, [num])
 					} else {
-						mentions(`Noz-moscada sugada com sucesso(quê?)  : @${mentioned[0].split('@')[0]}`, mentioned, true)
+						mentions(`Tomou headshot otario kkkkkkkkk🤡🤡  : @${mentioned[0].split('@')[0]}`, mentioned, true)
 						baby.groupRemove(from, mentioned)
 						}
 					break
