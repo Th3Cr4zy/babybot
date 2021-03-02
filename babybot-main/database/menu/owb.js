@@ -1,7 +1,7 @@
 const owb = (pushname, prefix, botName, ownerName, getLevelingLevel, sender, _registered) => {
-	return `🔰 -----[*MENU DO DONO* ]----- 🔰
+	return `🔰 -----[*MENU DO SENPAII* ]----- 🔰
 Hello, ${pushname} 👋
-Somente meu senpai é digno desses comandos${sender.split("@")[0]}
+Somente meu senpai é digno desses comandos ${sender.split("@")[0]}
 ┏━━━━━━━━━━━━━━━━━━━━┓
 ┃╭───────────────────
 ┃│➸ NOME : ${pushname}

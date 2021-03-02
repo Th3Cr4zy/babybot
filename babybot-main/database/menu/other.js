@@ -16,7 +16,7 @@ Aqui estão meus outros comandos
 ┃│➸ *${prefix}wiki*
 ┃│➸ *${prefix}pinterest*
 ┃│➸ *${prefix}resepmakanan*
-┃│➸ *${prefix}beritahoax*
+┃│➸ *${prefix}noticiasfalsas*
 ┃│➸ *${prefix}timer*
 ┃│➸ *${prefix}nulis1*
 ┃│➸ *${prefix}nulis2*

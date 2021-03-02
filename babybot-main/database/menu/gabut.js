@@ -21,7 +21,7 @@ Aqui estão os comandos de brincadeiras
 ┃│➸ *${prefix}nota*
 ┃│exemplo: !nota de quanto sou bonito
 ┃│➸ *${prefix}cekbapak*
-┃│➸ *${prefix}medirviadagedo*
+┃│➸ *${prefix}medirviadagemdo*
 ┃│➸ *${prefix}verdade*
 ┃│➸ *${prefix}desafio*
 ┃│➸ *${prefix}tebakin*

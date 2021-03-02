@@ -20,7 +20,7 @@ Aqui estão meus comandos pro grupo
 ┃│➸ *${prefix}grup* 「buka/tutup」
 ┃│➸ *${prefix}add*
 ┃│➸ *${prefix}kick*
-┃│➸ *${prefix}hedsot*
+┃│➸ *${prefix}headshot*
 ┃│➸ *${prefix}linkgrup*
 ┃│➸ *${prefix}promote*
 ┃│➸ *${prefix}demote*

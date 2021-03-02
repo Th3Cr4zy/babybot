@@ -1429,6 +1429,7 @@ case 'neontext':
                 }
 					break
 				case 'simih':
+				case 'simi':
                   if (isBanned) return reply(nad.baned())				
 					if (!isGroup) return reply(nad.groupo())
 					if (!isGroupAdmins) return reply(nad.admin())
@@ -1528,7 +1529,7 @@ case 'neontext':
 						baby.groupAdd(from, [num])
 					} catch (e) {
 						console.log('Error :', e)
-						reply('Assim se quiser adicionar em privado, tudo bem :)')
+						reply('N consegui add, essa pessoa deve ter colocado pra só contatos poderem add ela')
 					}
 					break
 			     	case 'kick':
@@ -1582,7 +1583,7 @@ case 'neontext':
                 const userXp = getLevelingXp(sender)
                 if (userLevel === undefined && userXp === undefined) return reply(nad.lvlnul())
                 const requiredXp = 5000 * (Math.pow(2, userLevel) - 1)
-                resul = `┏━━━━━━♡ *LEVEL* ♡━━━━━━━┓\n┃╭───────────────────\n┃│➸ nome : ${pushname}\n┃│➸ NOMOR : wa.me/${sender.split("@")[0]}\n┃│➸ XP : ${userXp}/${requiredXp}\n┃│➸ LEVEL : ${userLevel}\n┃╰───────────────────\n┗━━━━━━━━━━━━━━━━━━━━┛`
+                resul = `┏━━━━━━♡ *LEVEL* ♡━━━━━━━┓\n┃╭───────────────────\n┃│➸ nome : ${pushname}\n┃│➸ NUMERO : wa.me/${sender.split("@")[0]}\n┃│➸ XP : ${userXp}/${requiredXp}\n┃│➸ LEVEL : ${userLevel}\n┃╰───────────────────\n┗━━━━━━━━━━━━━━━━━━━━┛`
                baby.sendMessage(from, resul, text, { quoted: mek})
                 .catch(async (err) => {
                         console.error(err)
@@ -1643,13 +1644,13 @@ case 'neontext':
 					if (mentioned.length > 1) {
 						teks = ''
 						for (let _ of mentioned) {
-							teks += `*virou membro comum kkkkkkkk* :\n`
+							teks += `* Ala, virou membro comum!! KKKKKKKKKKKK🤡🤡* :\n`
 							teks += `@_.split('@')[0]`
 						}
 						mentions(teks, mentioned, true)
 						baby.groupDemoteAdmin(from, mentioned)
 					} else {
-						mentions(`Yahh @${mentioned[0].split('@')[0]} Virou membro comum kkkkkkkkkkkkkkkk`, mentioned, true)
+						mentions(`Ala, o @${mentioned[0].split('@')[0]} virou membro comum!! KKKKKKKKKKKK🤡🤡`, mentioned, true)
 						baby.groupDemoteAdmin(from, mentioned)
 					}
 					break
@@ -1669,11 +1670,12 @@ case 'neontext':
 						mentions(teks, mentioned, true)
 						baby.groupMakeAdmin(from, mentioned)
 					} else {
-						mentions(`Parabens🥳 @${mentioned[0].split('@')[0]} *Você não é mais um membro comum* >_<`, mentioned, true)
+						mentions(`Parabens🥳 @${mentioned[0].split('@')[0]} *Você não é mais um membro comum* `, mentioned, true)
 						baby.groupMakeAdmin(from, mentioned)
 					}
 					break
 				case 'hedsot':
+				case 'headshot':
                 if (!isRegistered) return reply(nad.noregis())				
 					if (!isGroup) return reply(nad.groupo())
 					if (!isGroupAdmins) return reply(nad.admin())
@@ -1923,7 +1925,7 @@ break
 				if (!isPrem) return reply(nad.premium())
 			data = await fetchJson(`https://tobz-api.herokuapp.com/api/moddroid?q=${body.slice(10)}&apikey=BotWeA`)
 			hepi = data.result[0] 
-			teks = `*➸ Nome*: ${data.result[0].title}\n*➸ publisher*: ${hepi.publisher}\n*➸ mod info:* ${hepi.mod_info}\n*➸ size*: ${hepi.size}\n*➸ latest version*: ${hepi.latest_version}\n*➸ genre*: ${hepi.genre}\n*➸ link:* ${hepi.link}\n*➸ download*: ${hepi.download}`
+			teks = `*➸ Nome*: ${data.result[0].title}\n*➸ editor*: ${hepi.publisher}\n*➸ mod info:* ${hepi.mod_info}\n*➸ size*: ${hepi.size}\n*➸ última versão*: ${hepi.latest_version}\n*➸ gênero*: ${hepi.genre}\n*➸ link:* ${hepi.link}\n*➸ download*: ${hepi.download}`
 			buffer = await getBuffer(hepi.image)
 			baby.sendMessage(from, buffer, image, {quoted: mek, caption: `${teks}`})
 			break
@@ -1933,7 +1935,7 @@ break
 				if (!isPrem) return reply(nad.premium())
 			data = await fetchJson(`https://tobz-api.herokuapp.com/api/happymod?q=${body.slice(10)}&apikey=BotWeA`)
 			hupo = data.result[0] 
-			teks = `*➸ Nome*: ${data.result[0].title}\n*➸ version*: ${hupo.version}\n*➸ size:* ${hupo.size}\n*➸ root*: ${hupo.root}\n*➸ purchase*: ${hupo.price}\n*➸ link*: ${hupo.link}\n*➸ download*: ${hupo.download}`
+			teks = `*➸ Nome*: ${data.result[0].title}\n*➸ versão*: ${hupo.version}\n*➸ Tamanho:* ${hupo.size}\n*➸ raiz*: ${hupo.root}\n*➸ compra*: ${hupo.price}\n*➸ link*: ${hupo.link}\n*➸ download*: ${hupo.download}`
 			buffer = await getBuffer(hupo.image)
 			baby.sendMessage(from, buffer, image, {quoted: mek, caption: `${teks}`})
 			break
@@ -1951,6 +1953,7 @@ break
 					await limitAdd(sender)
 					break 
                 case 'beritahoax':
+                case 'noticiasfalsas':
                   if (isBanned) return reply(nad.baned())
 				if (!isRegistered) return reply(nad.noregis())
 				if (isLimit(sender)) return reply(nad.limitend(pusname))
@@ -1958,7 +1961,7 @@ break
 					data = await fetchJson(`https://docs-jojo.herokuapp.com/api/infohoax`, {method: 'get'})
 					teks = '♡───────────♡\n'
 					for (let i of data.result) {
-						teks += `*➸ Gambar* : ${i.image}\n*➸ Title* : ${i.title}\n*➸ link* : ${i.link}\n*➸ tag* : ${i.tag}\n♡───────────♡\n`
+						teks += `*➸ Foto* : ${i.image}\n*➸ Ti tulo* : ${i.title}\n*➸ link* : ${i.link}\n*➸ tag* : ${i.tag}\n♡───────────♡\n`
 					}
 					reply(teks.trim())
 					await limitAdd(sender)
@@ -1992,6 +1995,7 @@ break
                   baby.sendMessage(from, 'Esse é o número do meu senpai >_<: wa.me/558282132376',MessageType.text, { quoted: mek} )
 					break
 case 'hartatahta':
+case '
 if (isBanned) return reply(nad.baned())
 if (!isRegistered) return reply(nad.noregis())
 if (isLimit(sender)) return reply(nad.limitend(pusname))
@@ -2081,7 +2085,7 @@ break
 					if (args.length < 1) return
 					if (!isOwner) return reply(nad.ownerb())
 					prefix = args[0]
-					reply(`*「 SUCESSO 」* Prefix jadi ➸ : ${prefix}`)
+					reply(`*「 SUCESSO 」* Prefixo agora é ➸ : ${prefix}`)
 					break
 				case 'clearall':
 					if (!isOwner) return reply(nad.ownerb())
