@@ -928,20 +928,6 @@ switch(command) {
 					teks += `│ Numero De Usuarios Premium : ${premium.length}\n╰──────「 *${botName}* 」`
 					baby.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": premium}})
 					break
-				case 'bokep':
-				baby.updatePresence(from, Presence.composing) 
-                  if (isBanned) return reply(nad.baned())
-				if (!isRegistered) return reply(nad.noregis())
-				if (!isPrem) return reply(nad.premium())
-				 data = fs.readFileSync('./src/18.js');
-                 jsonData = JSON.parse(data);
-                 randIndex = Math.floor(Math.random() * jsonData.length);
-                 randKey = jsonData[randIndex];
-                 randBokep = await getBuffer(randKey.image)
-                 reply('NÃO COMEÇA BRO')
-                 randTeks = randKey.teks
-                 baby.sendMessage(from, randBokep, image, {quoted: mek, caption: randTeks})
-				break
 				case 'mutual':
                   if (isBanned) return reply(nad.baned())
 				if (!isRegistered) return reply(nad.noregis())
