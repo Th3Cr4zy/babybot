@@ -1981,7 +1981,6 @@ break
                   baby.sendMessage(from, 'Esse é o número do meu senpai >_<: wa.me/558282132376',MessageType.text, { quoted: mek} )
 					break
 case 'hartatahta':
-case '
 if (isBanned) return reply(nad.baned())
 if (!isRegistered) return reply(nad.noregis())
 if (isLimit(sender)) return reply(nad.limitend(pusname))
