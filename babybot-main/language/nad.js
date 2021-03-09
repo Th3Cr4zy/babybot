@@ -71,7 +71,7 @@ exports.nsfwoff = () => {
 }
 
 exports.bug = () => {
-	return`*O problema foi relatado ao proprietario de BOT, relatorios falsos/main2 não seram respondidos*`
+	return`*O problema foi relatado ao proprietario de BOT, relatorios falsos/main2 ocasionará em ban*`
 }
 
 exports.wrongf = () => {
@@ -83,11 +83,11 @@ exports.clears = () => {
 }
 
 exports.pc = () => {
-	return`*「❗」CADASTRO*\n\n para saber se voce se cadastrou, verifique a mensagem que enviei \n\nNOTA:\n*se você nao entendeu a mensagem, significa que voce nao salvou o número de seu bot*`
+	return`*「❗」CADASTRO*\n\n para saber se voce se cadastrou, verifique a mensagem que enviei \n\nNOTA:\n*se você nao entendeu a mensagem, significa que voce nao salvou o número na bot*`
 }
 
 exports.registered = (namaUser, umurUser, serialUser, time, sender, botName) => {
-	return`*「 REGISTRO DE SUCESSO 」*\nPara Informacoes De Usuario :\n\n*➸ Nome : ${namaUser}*\n*➸ Numero : wa.me/${sender.split("@")[0]}*\n*➸ Idade : ${umurUser}*\n*➸ Hora Do Registro : ${time}*\n\n*「SN」: ${serialUser}*\n_NOTA : Esta mensagem e muito importante :v_`
+	return`*「 SUCESSO NO REGISTRO 」*\nPara Informacoes De Usuario :\n\n*➸ Nome : ${namaUser}*\n*➸ Numero : wa.me/${sender.split("@")[0]}*\n*➸ Idade : ${umurUser}*\n*➸ Hora Do Registro : ${time}*\n\n*「SN」: ${serialUser}*\n_NOTA : Esta mensagem e muito importante :v_`
 }
 
 exports.cmdnf = (prefix, command) => {

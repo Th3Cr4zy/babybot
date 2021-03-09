@@ -501,25 +501,17 @@ baby.on('group-participants-update', async (anu) => {
                 if (mesejAnti.includes("://chat.whatsapp.com/")){
 		        if (!isGroup) return
 		        if (!isAntiLink) return
-		        if (isGroupAdmins) return reply('Atasan grup mah bebas yakan:v')
+		        if (isGroupAdmins) return reply('Chefes de grupo são livres :v')
 		        baby.updatePresence(from, Presence.composing)
-		        if (mesejAnti.includes("#izinbos")) return reply("Iya kak jangan spam ya")
+		        if (mesejAnti.includes("#izinbos")) return reply("Sim mano, não faça spam")
 		        var kic = `${sender.split("@")[0]}@s.whatsapp.net`
 		        reply(`Adeus ${sender.split("@")[0]} MANDA LINK NA PQP ARROMBADO😡`)
 		        setTimeout( () => {
-			        baby.groupRemove(from, [kic]).catch((e)=>{reply(`BOT HARUS JADI ADMIN`)})
+			        baby.groupRemove(from, [kic]).catch((e)=>{reply(`O BOT DEVE SER ADMIN`)})
 		        }, 3000)
 		        setTimeout( () => {
 			        baby.updatePresence(from, Presence.composing)
-			        reply("Se considere Um Cara morto :v")
-		        }, 2000)
-		        setTimeout( () => {
-			        baby.updatePresence(from, Presence.composing)
-			        reply("Adeus")
-		        }, 1000)
-		        setTimeout( () => {
-			        baby.updatePresence(from, Presence.composing)
-			        reply("Va postar no cabare da sua mãe")
+			        reply("Adeus, se considere um cara morto")
 		        }, 0)
 	        }               
 			colors = ['red','white','black','blue','yellow','green']
@@ -885,9 +877,9 @@ switch(command) {
                    if (isLimit(sender)) return reply(nad.limitend(pusname))
                      teks = body.slice(9)
                      anu = await fetchJson(`https://api.xteam.xyz/dl/igstalk?nama=${teks}&APIKEY=${XteamKey}`, {method: 'get'})
-                     reply('「❗」Tente de novo, é Stalking IG')
+                     reply('「❗」Tente de novo, é "!stalkig **IG da pessoa**')
                      buffer = await getBuffer(anu.result.user.hd_profile_pic_url_info.url)
-                     hasil = `YAHAHA ESTA EM MEU BOS STALK PARA O NOME DE USUÁRIO ${teks} \n\n *Username?* : _${anu.result.user.username}_ \n *Nome??* : _${anu.result.user.full_name}_ \n *Seguidores??﹦?* : _${anu.result.user.follower_count}_ \n *Seguindo?* : _${anu.result.user.following_count}_ \n *Posts?* : _${anu.result.user.media_count}_ \n *Biografia?? :* _${anu.result.user.biography}`
+                     hasil = `STALKEANDO O(A) ${teks} \n\n *Username?* : _${anu.result.user.username}_ \n *Nome??* : _${anu.result.user.full_name}_ \n *Seguidores??﹦?* : _${anu.result.user.follower_count}_ \n *Seguindo?* : _${anu.result.user.following_count}_ \n *Posts?* : _${anu.result.user.media_count}_ \n *Biografia?? :* _${anu.result.user.biography}`
                     baby.sendMessage(from, buffer, image, {quoted: mek, caption: hasil})
                     await limitAdd(sender)
 			       break
@@ -919,20 +911,20 @@ switch(command) {
 				case 'premiumlist':
 					baby.updatePresence(from, Presence.composing) 
                     if (!isRegistered) return reply(nad.noregis())
-					teks = `╭─「 *JUMLAH USER PREMIUM* 」\n`
+					teks = `╭─「 *USUÁRIOS PREMIUNS* 」\n`
 					no = 0
 					for (let prem of premium) {
 						no += 1
 						teks += `│「${no.toString()}」 @${prem.split('@')[0]}\n`
 					}
-					teks += `│ Numero De Usuarios Premium : ${premium.length}\n╰──────「 *${botName}* 」`
+					teks += `│ Numeros De Usuarios Premium : ${premium.length}\n╰──────「 *${botName}* 」`
 					baby.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": premium}})
 					break
 				case 'mutual':
                   if (isBanned) return reply(nad.baned())
 				if (!isRegistered) return reply(nad.noregis())
 				if (!isPrem) return reply(nad.premium())
-                if (isGroup) return  reply( 'NÃO PODE ESTAR NO GRUPO KAK')
+                if (isGroup) return  reply( 'NÃO PODE ESTAR NO GRUPO')
                 anug = getRegisteredRandomId(_registered).replace('@s.whatsapp.net','')
                 await reply('Ache um companheiro(a) >_<')
                 await reply(`wa.me/${anug}`)
@@ -942,7 +934,7 @@ switch(command) {
                   if (isBanned) return reply(nad.baned())
 				if (!isRegistered) return reply(nad.noregis())
 				if (!isPrem) return reply(nad.premium())
-                if (isGroup) return  reply( 'NÃO PODE ESTAR NO GRUPO KAK ')
+                if (isGroup) return  reply( 'NÃO PODE ESTAR NO GRUPO')
                 anug = getRegisteredRandomId(_registered).replace('@s.whatsapp.net','')
                 await reply('Ache um companheiro >_<')
                 await reply(`wa.me/${anug}`)
@@ -1490,14 +1482,15 @@ case 'neontext':
 					break
 					case 'grup':
 					case 'group':
+					case 'grupo':
                   if (isBanned) return reply(nad.baned())					
 					if (!isGroup) return reply(nad.groupo())
 					if (!isGroupAdmins) return reply(nad.admin())
 					if (!isBotGroupAdmins) return reply(nad.badmin())
-					if (args[0] === 'buka') {
+					if (args[0] === 'abrir') {
 					    reply(`*GRUPO ABERTO COM SUCESSO*`)
 						baby.groupSettingChange(from, GroupSettingChange.messageSend, false)
-					} else if (args[0] === 'tutup') {
+					} else if (args[0] === 'fechar') {
 						reply(`*SUCESSO AO FECHAR GRUPO*`)
 						baby.groupSettingChange(from, GroupSettingChange.messageSend, true)
 					}
@@ -1515,7 +1508,7 @@ case 'neontext':
 						baby.groupAdd(from, [num])
 					} catch (e) {
 						console.log('Error :', e)
-						reply('N consegui add, essa pessoa deve ter colocado pra só contatos poderem add ela')
+						reply('N consegui add, deve ter colocado pra só contatos poderem add ela')
 					}
 					break
 			     	case 'kick':
@@ -1678,7 +1671,7 @@ case 'neontext':
 						mentions(teks, mentioned, true)
 						baby.groupAdd(from, [num])
 					} else {
-						mentions(`Tomou headshot otario kkkkkkkkk🤡🤡  : @${mentioned[0].split('@')[0]}`, mentioned, true)
+						mentions(`Tomou headshot otario kkkkkkkkk🤡🤡 @${mentioned[0].split('@')[0]}`, mentioned, true)
 						baby.groupRemove(from, mentioned)
 						}
 					break
@@ -1687,7 +1680,7 @@ case 'neontext':
 				if (!isRegistered) return reply(nad.noregis())
 				if (isLimit(sender)) return reply(nad.limitend(pusname))				
 					if (!isGroup) return reply(nad.groupo())                 
-				if (args.length < 1) return reply(`Gini kak : ${prefix}fitnah [@tag&pesan&balasanbot]\n\nExemplo : ${prefix}fitnah @tagmember&hai&hai juga`)
+				if (args.length < 1) return reply(`Como esta mano: ${prefix}fitnah [@tag&oq ele(a) diz&oq eu respondo]\n\nExemplo : ${prefix}fitnah @tagmember&gosto de pau&que gay`)
 				var gh = body.slice(8)
 				mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 					var replace = gh.split("&")[0];

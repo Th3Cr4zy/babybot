@@ -17,7 +17,7 @@ Aqui estão meus comandos pro grupo
 ┃│➸ *${prefix}simih* 「1/0」
 ┃│➸ *${prefix}nsfw* 「1/0」
 ┃│➸ *${prefix}antilinkgrup* 「1/0」
-┃│➸ *${prefix}grup* 「buka/tutup」
+┃│➸ *${prefix}grupo* 「abrir/fechar」
 ┃│➸ *${prefix}add*
 ┃│➸ *${prefix}kick*
 ┃│➸ *${prefix}headshot*
@@ -30,7 +30,7 @@ Aqui estão meus comandos pro grupo
 ┃│➸ *${prefix}tagall*
 ┃│➸ *${prefix}admin*
 ┃│➸ *${prefix}level*
-┃│➸ *${prefix}fitnah*
+┃│➸ *${prefix}fitnah(criar mensagem fake)*
 ┃│➸ *${prefix}hidetag*
 ┃╰───────────────────
 ┗━━━━━━━━━━━━━━━━━━━━┛
